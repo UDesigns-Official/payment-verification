@@ -1,0 +1,8 @@
+{
+  "payments": [
+    { "upi": "UPI123ABC", "amount": 499.00 },
+    { "upi": "REF456XYZ", "amount": 999.50 },
+    { "upi": "PAY789LMN", "amount": 299.00 }
+  ],
+  "fraud": ["FAKE123", "SCAM456"]
+}

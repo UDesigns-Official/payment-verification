@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 10px;
+}
+
+header h1 {
+  color: #007BFF;
+  margin: 0;
+}
+
+header p {
+  color: #666;
+  font-style: italic;
+}
+
+section {
+  margin: 30px 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #444;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#result {
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.verified { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.not-found { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+.fraud { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+.spam { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.stat-box {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  font-size: 1.1em;
+}
+
+.stat-box.verified { background: #d4edda; color: #155724; }
+.stat-box.not-found { background: #f8d7da; color: #721c24; }
+.stat-box.fraud { background: #fff3cd; color: #856404; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background: #007BFF;
+  color: white;
+}
+
+table tr:hover {
+  background: #f1f1f1;
+}

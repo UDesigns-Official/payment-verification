@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Verification System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Payment Verification System</h1>
+      <p>A secure tool to validate UPI transactions</p>
+    </header>
+
+    <section id="form-section">
+      <h2>Submit Payment Details</h2>
+      <form id="paymentForm">
+        <label>UPI Reference Number *</label>
+        <input type="text" id="upiRef" placeholder="Enter UPI transaction ID" required />
+
+        <label>Amount Paid *</label>
+        <input type="number" step="0.01" id="amount" placeholder="e.g., 499.00" required />
+
+        <label>Mobile Number *</label>
+        <input type="tel" id="mobile" placeholder="10-digit number" required />
+
+        <label>Address (Optional)</label>
+        <textarea id="address" rows="3" placeholder="Full address for delivery"></textarea>
+
+        <button type="submit">Verify Payment</button>
+      </form>
+    </section>
+
+    <section id="result-section" style="display:none;">
+      <h2>Verification Result</h2>
+      <div id="result"></div>
+      <button onclick="resetForm()">Submit Another</button>
+    </section>
+
+    <section id="dashboard">
+      <h2>📊 Dashboard Summary</h2>
+      <div class="stats">
+        <div class="stat-box"><strong id="totalSubmissions">0</strong> Total Submissions</div>
+        <div class="stat-box verified"><strong id="verifiedCount">0</strong> ✅ Verified</div>
+        <div class="stat-box not-found"><strong id="notFoundCount">0</strong> ❌ Not Found</div>
+        <div class="stat-box fraud"><strong id="fraudCount">0</strong> 🚫 Fraud</div>
+      </div>
+    </section>
+
+    <section id="verified-list">
+      <h2>✅ Verified Payments</h2>
+      <table id="printTable">
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>UPI Ref No</th>
+            <th>Amount</th>
+            <th>Mobile</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
